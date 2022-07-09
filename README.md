@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
-This project was created by Bohdan Rusnachenko.
+This project was created by Bohdan Rusnachenko.\
+Firstly, you need to install all dependencies.
 
 ## Available Scripts
 
