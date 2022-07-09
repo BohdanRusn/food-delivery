@@ -12,8 +12,8 @@ function UnitPreviewItem(props) {
 
   }
   const decrementCount = () => {
-    (deleteOneUnit)(unit_id)
     setCount((count > 0) ? count - 1 : count);
+    (deleteOneUnit)(unit_id)
     getAllPreviewData();
 
   }
@@ -21,8 +21,8 @@ function UnitPreviewItem(props) {
   return (
         <div className="collection-item">
           <p>{unit_name}, кількість кг: {count}, ціна: {price} грн/кг</p>
-          <button className="waves-effect waves-light btn-small"  style={{marginRight: 5}} type="button" onClick={incrementCount}>Increment</button>
-          <button className="waves-effect waves-light btn-small" type="button" onClick={decrementCount}>Decrement</button>
+          <button className="waves-effect waves-light btn-small" type="button" style={{marginRight: 5}} onClick={decrementCount}>-</button>
+          <button className="waves-effect waves-light btn-small" type="button" onClick={incrementCount}>+</button>
         </div>
   )
 }

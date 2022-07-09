@@ -10,6 +10,10 @@
     padding-left: 10px !important;
 }
 
+.brand-logo{
+    cursor: default;
+}
+
 .unitsListScroll {
     overflow-y: scroll;
     height: 380px;

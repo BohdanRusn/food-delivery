@@ -6,13 +6,13 @@ function UnitsList(props) {
   const units = data.map((unit) => {
     return (
           <UnitItem
-                key={unit.unit_id}
+                key={unit._id}
                 {...unit}
           />
     )
   })
   return (
-        <div className="col s9">
+        <div>
           {units}
         </div>
   )

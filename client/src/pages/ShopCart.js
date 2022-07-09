@@ -8,6 +8,8 @@ export const ShopCart = () => {
   const [units, setUnits] = useState([])
   const [unitsId, setUnitsId] = useState({})
   const [allUnits, setAllUnits] = useState([])
+  const [totalPrice, setTotalPrice] = useState(0)
+
   const initialState = {
     name: '',
     email: '',
@@ -22,7 +24,8 @@ export const ShopCart = () => {
   }
 
   const getAllPreviewData = useCallback(async () => {
-    const data = await request('api/getPreviewOrder');
+    const [data, finalPrice] = await request('api/getPreviewOrder');
+    setTotalPrice(finalPrice);
     setAllUnits(data);
     const countId = data.reduce((accumulator, value) => {
       return {...accumulator, [value.unit_id]: (accumulator[value.unit_id] || 0) + 1};
@@ -50,7 +53,6 @@ export const ShopCart = () => {
         },
         method: 'POST',
         body: JSON.stringify({
-          order_id: 55,
           ...userData,
           order: allUnits
         })
@@ -146,9 +148,12 @@ export const ShopCart = () => {
                   addOneUnit={addOneUnit}
                   deleteOneUnit={deleteOneUnit}
             />
-            <button className="btn waves-effect waves-light s6" type="submit" name="action" onClick={onSubmit}>Надіслати
-              <i className="material-icons right">send</i>
-            </button>
+            <div>
+              <p>До сплати: {totalPrice} грн</p>
+              <button className="btn waves-effect waves-light s6" type="submit" name="action" onClick={onSubmit}>Надіслати
+                <i className="material-icons right">send</i>
+              </button>
+            </div>
           </div>
 
         </div>

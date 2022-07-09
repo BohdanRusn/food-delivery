@@ -13,7 +13,8 @@ exports.getAllUnits = async (req, res) => {
 exports.getPreviewOrder = async (req, res) => {
   try {
     const units = await OrderPreview.find();
-    res.send(units);
+    const finalPrice = units.reduce((acc, unit) => acc + unit.price, 0);
+    res.send([units, finalPrice]);
   } catch (error) {
     res.send({status: 500, body: 'Something went wrong, try again'})
   }
