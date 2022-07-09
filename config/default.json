@@ -1,4 +1,4 @@
 {
   "port": 3033,
-  "mongoUrl": "mongodb+srv://bohdan:25072020@cluster0.qexrqet.mongodb.net/food?retryWrites=true&w=majority"
+  "mongoUrl": "mongodb+srv://bohdan:25072020@cluster0.qexrqet.mongodb.net/app?retryWrites=true&w=majority"
 }

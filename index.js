@@ -1,12 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const config = require('config');
-// const routes = require('./routes/index');
-
-const PORT = config.get('port') || 3033;
+const router = require('./routes/index')
 
 const app = express();
-// app.use();
+
+app.use(express.json({extended: true}));
+
+app.use('/api', router);
+
+const PORT = config.get('port') || 3033;
 async function start() {
   try {
     await mongoose.connect(config.get('mongoUrl'),
