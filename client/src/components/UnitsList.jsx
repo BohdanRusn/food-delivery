@@ -1,4 +1,4 @@
-import UnitItem from "./unitItem";
+import UnitItem from "./UnitItem";
 
 function UnitsList(props) {
 

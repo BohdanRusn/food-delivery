@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import {useHttp} from "../hooks/http.hook";
-import UnitsPreviewList from "../components/unitsPreviewList";
+import UnitsPreviewList from "../components/UnitsPreviewList";
 import 'materialize-css'
 
 

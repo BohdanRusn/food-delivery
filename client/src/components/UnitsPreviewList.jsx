@@ -1,4 +1,4 @@
-import UnitPreviewItem from "./unitPreviewItem";
+import UnitPreviewItem from "./UnitPreviewItem";
 import 'materialize-css'
 
 function UnitsPreviewList(props) {

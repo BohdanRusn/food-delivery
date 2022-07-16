@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useHttp} from "../hooks/http.hook";
-import UnitsList from "../components/unitsList";
+import UnitsList from "../components/UnitsList";
 import 'materialize-css'
 
 export const Main = () => {
