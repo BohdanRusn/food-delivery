@@ -4,7 +4,7 @@ const OrderPreview = require('../models/OrderPreview')
 exports.getAllUnits = async (req, res) => {
   try {
     const units = await Unit.find();
-    res.send(units);
+    res.json(units);
   } catch (error) {
     res.send({status: 500, body: 'Something went wrong, try again'})
   }
