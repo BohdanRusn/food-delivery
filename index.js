@@ -18,7 +18,9 @@ __dirname = path.resolve();
 //   })
 // }
 
-
+app.get('/', (req, res) => {
+  res.send('App is running');
+})
 
 const PORT = process.env.PORT || 3033;
 
