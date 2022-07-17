@@ -23,6 +23,7 @@
       "react-app"
     ]
   },
+  "engines": { "node": "16.x" },
   "proxy": "http://localhost:3033",
   "browserslist": {
     "production": [
