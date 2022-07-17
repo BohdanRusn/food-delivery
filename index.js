@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json({extended: true}));
 
-app.use('/api', router);
+app.use('https://delivery-v245.herokuapp.com//api', router);
 __dirname = path.resolve();
 // if (process.env.NODE_ENV === 'production') {
 //   app.use('/',express.static(path.join(__dirname, '/client/build')));
