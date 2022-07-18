@@ -5,7 +5,8 @@ function UnitItem(props) {
   const {request} = useHttp();
 
 
-  const addUnitToPreview = async (grocer_id, unit_id, unit_name, price) => {
+  const addUnitToPreview = async (e, grocer_id, unit_id, unit_name, price) => {
+    e.preventDefault();
     await request('api/sentPreviewOrder', "POST", {
       grocer_id: grocer_id,
       unit_id: unit_id,
@@ -20,7 +21,7 @@ function UnitItem(props) {
             <div className="card-image">
               <img alt={'Thumbnail'} src={thumbnail}/>
               <a href="/#" className="btn-floating halfway-fab waves-effect waves-light red"
-                 onClick={() => addUnitToPreview(grocer_id, unit_id, unit_name, price)}>
+                 onClick={(e) => addUnitToPreview(e, grocer_id, unit_id, unit_name, price)}>
                 <i className="material-icons ">add</i></a>
             </div>
             <div className="card-content">

@@ -49,7 +49,9 @@ export const ShopCart = (callback, deps) => {
     if (validData()) {
       await fetch('api/send', {
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'AllowedHeaders': '*',
+          'AllowedMethods': 'POST, GET, PUT, DELETE, HEAD'
         },
         method: 'POST',
         body: JSON.stringify({
