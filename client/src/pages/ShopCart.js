@@ -4,7 +4,7 @@ import UnitsPreviewList from "../components/UnitsPreviewList";
 import 'materialize-css'
 
 
-export const ShopCart = () => {
+export const ShopCart = (callback, deps) => {
   const [units, setUnits] = useState([])
   const [unitsId, setUnitsId] = useState({})
   const [allUnits, setAllUnits] = useState([])
@@ -19,7 +19,7 @@ export const ShopCart = () => {
   const [userData, setUserData] = useState(initialState)
   const {request} = useHttp();
 
-  const deleteAllPreview = async e => {
+  const deleteAllPreview = async () => {
     await request('api/deleteAllFromPreview', "DELETE")
   }
 
@@ -33,7 +33,7 @@ export const ShopCart = () => {
     setUnitsId(countId);
     const uniqUnits = [...new Map(data.map(v => [v.unit_id, v])).values()];
     setUnits(uniqUnits);
-  }, [])
+  }, [request])
 
   useEffect(() => {
     getAllPreviewData().catch(console.error)

@@ -23,8 +23,10 @@
       "react-app"
     ]
   },
-  "engines": { "node": "16.x" },
-  "proxy": "http://localhost:3033",
+  "engines": {
+    "node": "16.x"
+  },
+  "proxy": "https://yqiide9w45.execute-api.eu-central-1.amazonaws.com/",
   "browserslist": {
     "production": [
       ">0.2%",

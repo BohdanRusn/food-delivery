@@ -19,7 +19,7 @@ function UnitItem(props) {
           <div className="card">
             <div className="card-image">
               <img alt={'Thumbnail'} src={thumbnail}/>
-              <a className="btn-floating halfway-fab waves-effect waves-light red"
+              <a href="/#" className="btn-floating halfway-fab waves-effect waves-light red"
                  onClick={() => addUnitToPreview(grocer_id, unit_id, unit_name, price)}>
                 <i className="material-icons ">add</i></a>
             </div>
