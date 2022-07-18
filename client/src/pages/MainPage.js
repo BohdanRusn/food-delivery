@@ -8,7 +8,7 @@ export const Main = () => {
   const {request} = useHttp();
 
   const getAllData = async () => {
-    const data = await request('api/getAllUnits')
+    const data = await request('https://yqiide9w45.execute-api.eu-central-1.amazonaws.com/api/getAllUnits')
     setUnits(data);
   }
 
