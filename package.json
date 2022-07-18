@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/BohdanRusn/food-delivery/issues"
   },
-  "homepage": "https://github.com/BohdanRusn/food-delivery#readme",
+  "homepage": ".",
   "devDependencies": {
     "concurrently": "^7.2.2",
     "cross-env": "^7.0.3",
