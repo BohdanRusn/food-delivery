@@ -3,9 +3,10 @@ const mongoose = require('mongoose');
 const config = require('config');
 const path = require('path');
 const router = require('./routes/index')
+const cors = require('cors');
 
 const app = express();
-
+app.use(cors());
 app.use(express.json({extended: true}));
 
 app.use('/api', router);
