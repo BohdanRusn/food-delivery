@@ -47,7 +47,7 @@ export const ShopCart = (callback, deps) => {
   const onSubmit = async (e) => {
     e.preventDefault();
     if (validData()) {
-      await fetch('api/send', {
+      await fetch('https://yqiide9w45.execute-api.eu-central-1.amazonaws.com/api/send', {
         headers: {
           'Content-Type': 'application/json',
           'AllowedHeaders': '*',

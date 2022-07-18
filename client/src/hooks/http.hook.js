@@ -12,7 +12,7 @@ export const useHttp = () => {
         headers['AllowedHeaders'] = '*';
         headers['AllowedMethods'] = 'POST, GET, PUT, DELETE, HEAD';
       }
-      const response = await fetch(url, {headers, method, body})
+      const response = await fetch(`https://yqiide9w45.execute-api.eu-central-1.amazonaws.com/${url}`, {headers, method, body})
       const data = await response.json();
 
       if (!response.ok) {
