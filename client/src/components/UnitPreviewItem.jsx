@@ -5,15 +5,15 @@ function UnitPreviewItem(props) {
   const [count, setCount] = useState(countUnits)
 
 
-  const incrementCount = () => {
-    (addOneUnit)(grocer_id, unit_id, unit_name, price);
+  const incrementCount = async () => {
+    await (addOneUnit)(grocer_id, unit_id, unit_name, price);
     setCount(count + 1);
     getAllPreviewData();
 
   }
-  const decrementCount = () => {
+  const decrementCount = async () => {
+    await (deleteOneUnit)(unit_id)
     setCount((count > 0) ? count - 1 : count);
-    (deleteOneUnit)(unit_id)
     getAllPreviewData();
 
   }
