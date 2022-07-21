@@ -13,6 +13,7 @@ function UnitItem(props) {
       unit_name: unit_name,
       price: price
     })
+    window.M.toast({html: "Додано в кошик", displayLength: 1500})
   }
 
   return (
