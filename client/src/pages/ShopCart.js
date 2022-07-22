@@ -4,7 +4,7 @@ import UnitsPreviewList from "../components/UnitsPreviewList";
 import 'materialize-css'
 
 
-export const ShopCart = (callback, deps) => {
+export const ShopCart = () => {
   const [units, setUnits] = useState([])
   const [unitsId, setUnitsId] = useState({})
   const [allUnits, setAllUnits] = useState([])
@@ -60,6 +60,7 @@ export const ShopCart = (callback, deps) => {
         })
       })
       await deleteAllPreview();
+      window.M.toast({html: "Ваше замовлення прийнято.", displayLength: 1500})
       setUserData(initialState)
       await getAllPreviewData();
     } else {
